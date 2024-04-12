@@ -1,0 +1,191 @@
+[dinky] 2024-04-11 00:00:05 PST ERROR org.dinky.aop.exception.UnKnownExceptionHandler 39 unknownException - null org.springframework.web.context.request.async.AsyncRequestTimeoutException: null
+	at org.springframework.web.context.request.async.TimeoutDeferredResultProcessingInterceptor.handleTimeout(TimeoutDeferredResultProcessingInterceptor.java:42) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.context.request.async.DeferredResultInterceptorChain.triggerAfterTimeout(DeferredResultInterceptorChain.java:79) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.context.request.async.WebAsyncManager.lambda$startDeferredResultProcessing$5(WebAsyncManager.java:438) ~[spring-web-5.3.27.jar:5.3.27]
+	at java.util.ArrayList.forEach(ArrayList.java:1259) ~[?:1.8.0_341]
+	at org.springframework.web.context.request.async.StandardServletAsyncWebRequest.onTimeout(StandardServletAsyncWebRequest.java:151) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.AsyncListenerWrapper.fireOnTimeout(AsyncListenerWrapper.java:44) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.AsyncContextImpl.timeout(AsyncContextImpl.java:133) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.connector.CoyoteAdapter.asyncDispatch(CoyoteAdapter.java:137) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.coyote.AbstractProcessor.dispatch(AbstractProcessor.java:241) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at java.lang.Thread.run(Thread.java:750) ~[?:1.8.0_341]
+
+[dinky] 2024-04-11 00:00:06 PST WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver 434 doResolveHandlerMethodException - Failure in @ExceptionHandler org.dinky.aop.exception.UnKnownExceptionHandler#unknownException(Exception) org.springframework.http.converter.HttpMessageNotWritableException: No converter for [class org.dinky.data.result.Result] with preset Content-Type 'text/event-stream'
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:312) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.handleReturnValue(RequestResponseBodyMethodProcessor.java:183) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:135) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:428) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:75) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:142) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1332) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1143) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:529) ~[tomcat-embed-core-9.0.74.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) ~[tomcat-embed-core-9.0.74.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96) ~[spring-boot-actuator-2.7.11.jar:2.7.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:661) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationDispatcher.doDispatch(ApplicationDispatcher.java:589) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationDispatcher.dispatch(ApplicationDispatcher.java:558) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.AsyncContextImpl$AsyncRunnable.run(AsyncContextImpl.java:562) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.AsyncContextImpl.doInternalDispatch(AsyncContextImpl.java:337) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.connector.CoyoteAdapter.asyncDispatch(CoyoteAdapter.java:237) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.coyote.AbstractProcessor.dispatch(AbstractProcessor.java:241) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at java.lang.Thread.run(Thread.java:750) ~[?:1.8.0_341]
+
+[dinky] 2024-04-11 00:00:06 PST WARN  org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver 539 handleAsyncRequestTimeoutException - Async request timed out
+[dinky] 2024-04-11 00:00:06 PST WARN  org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver 208 logException - Resolved [org.springframework.web.context.request.async.AsyncRequestTimeoutException]
+[dinky] 2024-04-11 00:00:06 PST WARN  org.dinky.context.SseSessionContextHolder 70 connectSession - Session key already exists: 6fa03a5a-9f26-4923-ad1e-94ba255a5928，replace it
+[dinky] 2024-04-11 00:00:06 PST WARN  org.dinky.context.SseSessionContextHolder 70 connectSession - Session key already exists: 79c5b169-0569-43bd-add9-f0246c5e47fe，replace it
+[dinky] 2024-04-11 00:00:14 PST INFO  org.dinky.service.impl.TaskServiceImpl 275 buildJobConfig - Init remote cluster
+[dinky] 2024-04-11 00:00:14 PST INFO  org.dinky.service.impl.TaskServiceImpl 275 buildJobConfig - Init remote cluster
+[dinky] 2024-04-11 00:00:14 PST ERROR org.apache.flink.runtime.rest.handler.AbstractHandler 252 handleException - Exception occurred in REST handler: Config key [state.savepoints.dir] is not set. Property [target-directory] must be provided.
+[dinky] 2024-04-11 00:00:15 PST WARN  org.dinky.service.impl.TaskServiceImpl 446 cancelTaskJob - Stop with savcePoint failed: org.apache.flink.runtime.rest.handler.RestHandlerException: Config key [state.savepoints.dir] is not set. Property [target-directory] must be provided., will try normal rest api stop
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.executiongraph.DefaultExecutionGraph 1146 transitionState - Job KafkaReader (ff4837b6b74dc8f20c0a5bff35d3f0a5) switched from state RUNNING to CANCELLING.
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.executiongraph.Execution 1442 transitionState - Source: test[7] -> test_kafka[8]: Writer -> test_kafka[8]: Committer (1/1) (a1f9559f9c54f2cf756b118e6dd29e5c_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from RUNNING to CANCELING.
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.taskmanager.Task 1140 cancelExecution - Attempting to cancel task Source: test[7] -> test_kafka[8]: Writer -> test_kafka[8]: Committer (1/1)#0 (a1f9559f9c54f2cf756b118e6dd29e5c_cbc357ccb763df2852fee8c4fc7d55f2_0_0).
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.taskmanager.Task 1085 transitionState - Source: test[7] -> test_kafka[8]: Writer -> test_kafka[8]: Committer (1/1)#0 (a1f9559f9c54f2cf756b118e6dd29e5c_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from RUNNING to CANCELING.
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.taskmanager.Task 1205 cancelOrFailAndCancelInvokableInternal - Triggering cancellation of task code Source: test[7] -> test_kafka[8]: Writer -> test_kafka[8]: Committer (1/1)#0 (a1f9559f9c54f2cf756b118e6dd29e5c_cbc357ccb763df2852fee8c4fc7d55f2_0_0).
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.kafka.shaded.org.apache.kafka.clients.producer.KafkaProducer 1310 close - [Producer clientId=producer-2] Closing the Kafka producer with timeoutMillis = 3600000 ms.
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.kafka.shaded.org.apache.kafka.common.metrics.Metrics 693 close - Metrics scheduler closed
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.kafka.shaded.org.apache.kafka.common.metrics.Metrics 697 close - Closing reporter org.apache.flink.kafka.shaded.org.apache.kafka.common.metrics.JmxReporter
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.kafka.shaded.org.apache.kafka.common.metrics.Metrics 703 close - Metrics reporters closed
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.kafka.shaded.org.apache.kafka.common.utils.AppInfoParser 83 unregisterAppInfo - App info kafka.producer for producer-2 unregistered
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.connector.base.source.reader.SourceReaderBase 295 close - Closing Source Reader.
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.connector.base.source.reader.fetcher.SplitFetcher 316 shutdown - Shutting down split fetcher 0
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.kafka.shaded.org.apache.kafka.clients.consumer.internals.AbstractCoordinator 1015 resetStateAndGeneration - [Consumer clientId=testGroup-0, groupId=testGroup] Resetting generation and member id due to: consumer pro-actively leaving the group
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.kafka.shaded.org.apache.kafka.clients.consumer.internals.AbstractCoordinator 1062 requestRejoin - [Consumer clientId=testGroup-0, groupId=testGroup] Request joining group due to: consumer pro-actively leaving the group
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.kafka.shaded.org.apache.kafka.common.metrics.Metrics 693 close - Metrics scheduler closed
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.kafka.shaded.org.apache.kafka.common.metrics.Metrics 697 close - Closing reporter org.apache.flink.kafka.shaded.org.apache.kafka.common.metrics.JmxReporter
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.kafka.shaded.org.apache.kafka.common.metrics.Metrics 703 close - Metrics reporters closed
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.kafka.shaded.org.apache.kafka.common.utils.AppInfoParser 83 unregisterAppInfo - App info kafka.consumer for testGroup-0 unregistered
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.connector.base.source.reader.fetcher.SplitFetcher 128 run - Split fetcher 0 exited.
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.taskmanager.Task 1085 transitionState - Source: test[7] -> test_kafka[8]: Writer -> test_kafka[8]: Committer (1/1)#0 (a1f9559f9c54f2cf756b118e6dd29e5c_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from CANCELING to CANCELED.
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.taskmanager.Task 830 doRun - Freeing task resources for Source: test[7] -> test_kafka[8]: Writer -> test_kafka[8]: Committer (1/1)#0 (a1f9559f9c54f2cf756b118e6dd29e5c_cbc357ccb763df2852fee8c4fc7d55f2_0_0).
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor 1978 unregisterTaskAndNotifyFinalState - Un-registering task and sending final execution state CANCELED to JobManager for task Source: test[7] -> test_kafka[8]: Writer -> test_kafka[8]: Committer (1/1)#0 a1f9559f9c54f2cf756b118e6dd29e5c_cbc357ccb763df2852fee8c4fc7d55f2_0_0.
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.executiongraph.Execution 1442 transitionState - Source: test[7] -> test_kafka[8]: Writer -> test_kafka[8]: Committer (1/1) (a1f9559f9c54f2cf756b118e6dd29e5c_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from CANCELING to CANCELED.
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.executiongraph.DefaultExecutionGraph 1146 transitionState - Job KafkaReader (ff4837b6b74dc8f20c0a5bff35d3f0a5) switched from state CANCELLING to CANCELED.
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator 408 shutdown - Stopping checkpoint coordinator for job ff4837b6b74dc8f20c0a5bff35d3f0a5.
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.resourcemanager.slotmanager.FineGrainedSlotManager 318 processResourceRequirements - Clearing resource requirements of job ff4837b6b74dc8f20c0a5bff35d3f0a5
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.dispatcher.Dispatcher 1342 jobReachedTerminalState - Job ff4837b6b74dc8f20c0a5bff35d3f0a5 reached terminal state CANCELED.
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.dispatcher.Dispatcher 1390 lambda$registerGloballyTerminatedJobInJobResultStore$41 - Job ff4837b6b74dc8f20c0a5bff35d3f0a5 has been registered for cleanup in the JobResultStore after reaching a terminal state.
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.minicluster.MiniCluster 662 closeInternal - Shutting down Flink Mini Cluster
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.rest.RestServerEndpoint 373 closeAsync - Shutting down rest endpoint.
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor 477 onStop - Stopping TaskExecutor pekko://flink/user/rpc/taskmanager_8.
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.jobmaster.JobMaster 445 onStop - Stopping the JobMaster for job 'KafkaReader' (ff4837b6b74dc8f20c0a5bff35d3f0a5).
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor 1500 closeResourceManagerConnection - Close ResourceManager connection 0e90000a410456801f87e457a1c16757.
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor 1753 disconnectJobManagerConnection - Close JobManager connection for job ff4837b6b74dc8f20c0a5bff35d3f0a5.
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.resourcemanager.ResourceManager 1125 closeTaskManagerConnection - Closing TaskExecutor connection 3a3dc4a2-1016-4458-8de1-c32de738132f because: The TaskExecutor is shutting down.
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.resourcemanager.slotmanager.FineGrainedSlotManager 506 unregisterTaskManager - Unregistering task executor b3d40d933196909fc6b32f85ed8ea198 from the slot manager.
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.resourcemanager.slotmanager.DefaultSlotStatusSyncer 201 freeSlot - Freeing slot 4f8252b55f3c3f6c691783ee0c7ff5b4.
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.state.TaskExecutorStateChangelogStoragesManager 234 shutdown - Shutting down TaskExecutorStateChangelogStoragesManager.
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.source.coordinator.SourceCoordinator 282 close - Closing SourceCoordinator for source Source: test[7].
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.state.TaskExecutorChannelStateExecutorFactoryManager 95 shutdown - Shutting down TaskExecutorChannelStateExecutorFactoryManager.
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.taskexecutor.slot.TaskSlotTableImpl 441 freeSlotInternal - Free slot TaskSlot(index:1, state:ALLOCATED, resource profile: ResourceProfile{taskHeapMemory=1024.000gb (1099511627776 bytes), taskOffHeapMemory=1024.000gb (1099511627776 bytes), managedMemory=128.000mb (134217728 bytes), networkMemory=64.000mb (67108864 bytes)}, allocationId: 4f8252b55f3c3f6c691783ee0c7ff5b4, jobId: ff4837b6b74dc8f20c0a5bff35d3f0a5).
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.kafka.shaded.org.apache.kafka.common.utils.AppInfoParser 83 unregisterAppInfo - App info kafka.admin.client for testGroup-enumerator-admin-client unregistered
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.checkpoint.StandaloneCompletedCheckpointStore 153 shutdown - Shutting down
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.jobmaster.JobMaster 541 disconnectTaskManager - Disconnect TaskExecutor 3a3dc4a2-1016-4458-8de1-c32de738132f because: Stopping JobMaster for job 'KafkaReader' (ff4837b6b74dc8f20c0a5bff35d3f0a5).
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService 140 stop - Stop job leader service.
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.jobmaster.slotpool.DefaultDeclarativeSlotPool 537 releaseSlots - Releasing slot [4f8252b55f3c3f6c691783ee0c7ff5b4].
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.state.TaskExecutorLocalStateStoresManager 314 shutdown - Shutting down TaskExecutorLocalStateStoresManager.
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.jobmaster.JobMaster 1257 dissolveResourceManagerConnection - Close ResourceManager connection 0e90000a410456801f87e457a1c16757: Stopping JobMaster for job 'KafkaReader' (ff4837b6b74dc8f20c0a5bff35d3f0a5).
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.kafka.shaded.org.apache.kafka.common.metrics.Metrics 693 close - Metrics scheduler closed
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.kafka.shaded.org.apache.kafka.common.metrics.Metrics 697 close - Closing reporter org.apache.flink.kafka.shaded.org.apache.kafka.common.metrics.JmxReporter
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.kafka.shaded.org.apache.kafka.common.metrics.Metrics 703 close - Metrics reporters closed
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.resourcemanager.ResourceManager 1088 closeJobManagerConnection - Disconnect job manager bc2fdeb69155d01f07f635420bf548b6@pekko://flink/user/rpc/jobmanager_11 for job ff4837b6b74dc8f20c0a5bff35d3f0a5 from the resource manager.
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.webmonitor.WebMonitorEndpoint 1091 lambda$shutDownInternal$7 - Removing cache directory /var/folders/bh/zkcp61wj1kgd28r58g7bsmp00000gn/T/flink-web-ui
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.source.coordinator.SourceCoordinator 287 close - Source coordinator for source Source: test[7] closed.
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.io.disk.FileChannelManagerImpl 149 lambda$getFileCloser$0 - FileChannelManager removed spill file directory /var/folders/bh/zkcp61wj1kgd28r58g7bsmp00000gn/T/flink-io-cd710b80-eb96-4ba7-990b-e307cd12cef5
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.io.network.NettyShuffleEnvironment 372 close - Shutting down the network environment and its components.
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.webmonitor.WebMonitorEndpoint 1126 revokeLeadership - http://localhost:47193 lost leadership
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.rest.RestServerEndpoint 381 lambda$closeAsync$1 - Shut down complete.
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.resourcemanager.ResourceManager 635 deregisterApplication - Shut down cluster because application is in CANCELED, diagnostics DispatcherResourceManagerComponent has been closed..
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.io.disk.FileChannelManagerImpl 149 lambda$getFileCloser$0 - FileChannelManager removed spill file directory /var/folders/bh/zkcp61wj1kgd28r58g7bsmp00000gn/T/flink-netty-shuffle-a544169c-9fd2-44b7-a7e3-419dd99c5631
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.entrypoint.component.DispatcherResourceManagerComponent 165 closeAsyncInternal - Closing components.
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.taskexecutor.KvStateService 122 shutdown - Shutting down the kvState service and its components.
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.dispatcher.runner.AbstractDispatcherLeaderProcess 136 closeInternal - Stopping SessionDispatcherLeaderProcess.
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService 140 stop - Stop job leader service.
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.dispatcher.Dispatcher 474 onStop - Stopping dispatcher pekko://flink/user/rpc/dispatcher_10.
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.resourcemanager.ResourceManagerServiceImpl 166 closeAsync - Stopping resource manager service.
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.dispatcher.Dispatcher 1289 terminateRunningJobs - Stopping all currently running jobs of dispatcher pekko://flink/user/rpc/dispatcher_10.
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager 382 stop - Stopping credential renewal
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager 386 stop - Stopped credential renewal
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.resourcemanager.slotmanager.FineGrainedSlotManager 278 close - Closing the slot manager.
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.resourcemanager.slotmanager.FineGrainedSlotManager 250 suspend - Suspending the slot manager.
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.dispatcher.Dispatcher 491 lambda$onStop$2 - Stopped dispatcher pekko://flink/user/rpc/dispatcher_10.
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.filecache.FileCache 160 shutdown - removed file cache directory /var/folders/bh/zkcp61wj1kgd28r58g7bsmp00000gn/T/flink-dist-cache-ca9246b7-92a3-4950-bee4-41d6de66110c
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor 528 handleOnStopException - Stopped TaskExecutor pekko://flink/user/rpc/taskmanager_8.
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcService 414 closeAsync - Stopping Pekko RPC service.
+[dinky] 2024-04-11 00:00:15 PST INFO  org.apache.pekko.event.slf4j.Slf4jLogger$$anonfun$receive$1 108 $anonfun$applyOrElse$3 - Running CoordinatedShutdown with reason [ActorSystemTerminateReason]
+[dinky] 2024-04-11 00:00:16 PST INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcService 414 closeAsync - Stopping Pekko RPC service.
+[dinky] 2024-04-11 00:00:16 PST INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcService 435 lambda$closeAsync$7 - Stopped Pekko RPC service.
+[dinky] 2024-04-11 00:00:16 PST INFO  org.apache.pekko.event.slf4j.Slf4jLogger$$anonfun$receive$1 108 $anonfun$applyOrElse$3 - Running CoordinatedShutdown with reason [ActorSystemTerminateReason]
+[dinky] 2024-04-11 00:00:16 PST INFO  org.apache.flink.runtime.blob.AbstractBlobCache 251 close - Shutting down BLOB cache
+[dinky] 2024-04-11 00:00:16 PST INFO  org.apache.flink.runtime.blob.AbstractBlobCache 251 close - Shutting down BLOB cache
+[dinky] 2024-04-11 00:00:16 PST INFO  org.apache.flink.runtime.blob.BlobServer 397 close - Stopped BLOB server at 0.0.0.0:59361
+[dinky] 2024-04-11 00:00:16 PST INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcService 435 lambda$closeAsync$7 - Stopped Pekko RPC service.
+[dinky] 2024-04-11 00:00:20 PST WARN  org.dinky.job.handler.JobRefreshHandler 231 getJobData - Connect 0.0.0.0:47193 failed,Connection refused (Connection refused)
+[dinky] 2024-04-11 00:00:25 PST WARN  org.dinky.job.handler.JobRefreshHandler 231 getJobData - Connect 0.0.0.0:47193 failed,ConnectException: Connection refused (Connection refused)
+[dinky] 2024-04-11 00:00:28 PST WARN  org.dinky.context.SseSessionContextHolder 70 connectSession - Session key already exists: 79c5b169-0569-43bd-add9-f0246c5e47fe，replace it
+[dinky] 2024-04-11 00:00:28 PST WARN  org.dinky.context.SseSessionContextHolder 70 connectSession - Session key already exists: bcf485d8-9a0b-41d6-8755-515b9f2ccb9f，replace it
+[dinky] 2024-04-11 00:00:30 PST WARN  org.dinky.job.handler.JobRefreshHandler 231 getJobData - Connect 0.0.0.0:47193 failed,ConnectException: Connection refused (Connection refused)
+[dinky] 2024-04-11 00:00:35 PST WARN  org.dinky.job.handler.JobRefreshHandler 231 getJobData - Connect 0.0.0.0:47193 failed,ConnectException: Connection refused (Connection refused)
+[dinky] 2024-04-11 00:00:36 PST ERROR org.dinky.context.SseSessionContextHolder 164 lambda$sendTopic$3 - Error sending sse data:java.io.IOException: Broken pipe
+[dinky] 2024-04-11 00:00:36 PST ERROR org.dinky.context.SseSessionContextHolder 130 onError - Type: SseSession [6fa03a5a-9f26-4923-ad1e-94ba255a5928] Error, Message: java.io.IOException: Broken pipe
+[dinky] 2024-04-11 00:00:36 PST ERROR org.dinky.context.SseSessionContextHolder 130 onError - Type: SseSession [6fa03a5a-9f26-4923-ad1e-94ba255a5928] Error, Message: Broken pipe
+[dinky] 2024-04-11 00:00:40 PST WARN  org.dinky.job.handler.JobRefreshHandler 231 getJobData - Connect 0.0.0.0:47193 failed,ConnectException: Connection refused (Connection refused)
+[dinky] 2024-04-11 00:00:45 PST WARN  org.dinky.job.handler.JobRefreshHandler 231 getJobData - Connect 0.0.0.0:47193 failed,ConnectException: Connection refused (Connection refused)
+[dinky] 2024-04-11 00:00:50 PST WARN  org.dinky.job.handler.JobRefreshHandler 231 getJobData - Connect 0.0.0.0:47193 failed,ConnectException: Connection refused (Connection refused)
+[dinky] 2024-04-11 00:00:55 PST WARN  org.dinky.job.handler.JobRefreshHandler 231 getJobData - Connect 0.0.0.0:47193 failed,ConnectException: Connection refused (Connection refused)
+[dinky] 2024-04-11 00:30:53 PST WARN  org.dinky.job.handler.JobRefreshHandler 231 getJobData - Connect 0.0.0.0:47193 failed,ConnectException: Connection refused (Connection refused)
+[dinky] 2024-04-11 02:00:32 PST INFO  org.springframework.web.socket.config.WebSocketMessageBrokerStats 128 lambda$initLoggingTask$0 - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 3, active threads = 1, queued tasks = 0, completed tasks = 2]
+[dinky] 2024-04-11 03:44:05 PST INFO  org.springframework.web.socket.config.WebSocketMessageBrokerStats 128 lambda$initLoggingTask$0 - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 0, completed tasks = 3]
+[dinky] 2024-04-11 04:14:05 PST INFO  org.springframework.web.socket.config.WebSocketMessageBrokerStats 128 lambda$initLoggingTask$0 - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 5, active threads = 1, queued tasks = 0, completed tasks = 4]
+[dinky] 2024-04-11 08:33:41 PST INFO  org.springframework.web.socket.config.WebSocketMessageBrokerStats 128 lambda$initLoggingTask$0 - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 6, active threads = 1, queued tasks = 0, completed tasks = 5]
+[dinky] 2024-04-11 09:03:41 PST INFO  org.springframework.web.socket.config.WebSocketMessageBrokerStats 128 lambda$initLoggingTask$0 - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 7, active threads = 1, queued tasks = 0, completed tasks = 6]
+[dinky] 2024-04-11 09:33:41 PST INFO  org.springframework.web.socket.config.WebSocketMessageBrokerStats 128 lambda$initLoggingTask$0 - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 0, completed tasks = 7]
+[dinky] 2024-04-11 22:39:55 PST INFO  org.springframework.web.socket.config.WebSocketMessageBrokerStats 128 lambda$initLoggingTask$0 - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 0, completed tasks = 8]
+[dinky] 2024-04-11 23:09:55 PST INFO  org.springframework.web.socket.config.WebSocketMessageBrokerStats 128 lambda$initLoggingTask$0 - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 0, completed tasks = 9]

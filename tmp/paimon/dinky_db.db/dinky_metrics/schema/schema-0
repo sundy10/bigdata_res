@@ -1,0 +1,32 @@
+{
+  "id" : 0,
+  "fields" : [ {
+    "id" : 0,
+    "name" : "heart_time",
+    "type" : "TIMESTAMP(3) NOT NULL"
+  }, {
+    "id" : 1,
+    "name" : "model",
+    "type" : "STRING NOT NULL"
+  }, {
+    "id" : 2,
+    "name" : "content",
+    "type" : "STRING"
+  }, {
+    "id" : 3,
+    "name" : "date",
+    "type" : "STRING NOT NULL"
+  } ],
+  "highestFieldId" : 3,
+  "partitionKeys" : [ "model", "date" ],
+  "primaryKeys" : [ "heart_time", "model", "date" ],
+  "options" : {
+    "snapshot.time-retained" : "10 s",
+    "partition.expiration-check-interval" : "1d",
+    "partition.timestamp-pattern" : "$date",
+    "partition.timestamp-formatter" : "yyyy-MM-dd",
+    "file.format" : "parquet",
+    "partition.expiration-time" : "7d"
+  },
+  "timeMillis" : 1712760459563
+}
