@@ -91,7 +91,21 @@ stop-cluster.sh
 start-cluster.sh
 ```
 ## 从Checkpoint恢复Flink SQL任务
-指定文件
+设置参数
+
+```
+-- checkpoint间隔时间，单位毫秒，没有默认值，如果想开启checkpoint，需要将该参数设置一个大于0的数值
+-- 如果想提升sink性能，比如写hudi，需要将该值设置大一点，因为间隔时间决定了批次大小
+-- checkpoint间隔时间不能设置太短也不能设置太长，太短影响写入性能，太长影响数据及时性。
+set execution.checkpointing.interval=10000; --10s
+-- 保存checkpoint文件的目录
+set state.checkpoints.dir=file:///Users/feicheng/bigdata/data/flink-tmp/checkpoint;
+-- 任务取消后保留checkpoint,默认值NO_EXTERNALIZED_CHECKPOINTS，
+-- 可选值NO_EXTERNALIZED_CHECKPOINTS、DELETE_ON_CANCELLATION、RETAIN_ON_CANCELLATION
+set execution.checkpointing.externalized-checkpoint-retention=RETAIN_ON_CANCELLATION;
+```
+从checkpoint恢复
+
 ```
 set execution.savepoint.path=file:///Users/feicheng/bigdata/data/flink-tmp/checkpoint/d82157eb8bdffb984189389e0d9c0716;
 ```
